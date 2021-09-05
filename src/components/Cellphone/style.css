@@ -63,4 +63,17 @@
 
 .phone__buttons {
   height: 70px;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+.phone__verify-number {
+  padding: 10px 20px;
+  background-color: #46b14f;
+  color: var(--white);
+  font-weight: 800;
+  font-size: 1.4rem;
+  border-radius: 100px;
+  border: 0;
+  outline: 0;
 }

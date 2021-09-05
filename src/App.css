@@ -23,3 +23,7 @@ section {
   width: 50vw;
   min-width: 320px;
 }
+
+button {
+  cursor: pointer;
+}

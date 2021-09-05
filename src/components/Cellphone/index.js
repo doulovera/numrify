@@ -53,7 +53,7 @@ export default function Cellphone () {
         }
       </div>
       <div className="phone__buttons">
-        <button>Verify number</button>
+        <button className="phone__verify-number">Verify number</button>
       </div>
     </div>
   )
