@@ -1,0 +1,66 @@
+.phone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 550px;
+  width: 300px;
+  padding: 25px 0;
+  margin: auto;
+  background-color: var(--white);
+  border: 12px solid #000;
+  box-shadow: 0 0 0 3px #686868;
+  border-radius: 40px;
+  user-select: none;
+}
+
+.phone__dock {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 80px);
+  height: 20px;
+  width: 160px;
+  background-color: #000;
+  border-radius: 0 0 14px 14px;
+}
+
+.phone__input__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.phone__input__container input {
+  height: 40px;
+  width: 105%;
+  text-align: center;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  transition: font-size 0.3s ease;
+}
+
+.phone__input__container button {
+  width: 50px;
+  padding-top: 3px;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.phone__keys__container {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: calc((var(--key-size) * 3) + 45px);
+  height: auto;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+
+
+.phone__buttons {
+  height: 70px;
+}

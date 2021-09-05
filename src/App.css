@@ -3,7 +3,7 @@
   --secondary: #fdc500;
   --white: #ffffff;
   --black: #000000;
-  --key-size: 85px;
+  --key-size: 70px;
 }
 
 .App {
@@ -19,7 +19,7 @@
 }
 
 section {
-  height: 95vh;
+  height: auto;
   width: 50vw;
   min-width: 320px;
 }

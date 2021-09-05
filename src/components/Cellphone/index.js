@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PhoneKey from '../PhoneKey'
+import Backspace from '../Icons/Backspace'
 import './style.css'
 
 const KEYS = [
@@ -9,13 +10,17 @@ const KEYS = [
 export default function Cellphone () {
   const [numbers, setNumbers] = useState([])
 
-  const handleChange = (event) => {
+  const maxNumberLength = numbers.length >= 15
+
+  const handleChangeInput = (event) => {
+    if (maxNumberLength) return console.log('A')
     const getNumber = event.target.value
     const convertStringToArray = getNumber.split('')
     setNumbers(convertStringToArray)
   }
 
   const handleClick = (event) => {
+    if (maxNumberLength) return
     const getNumber = event.target.value
     setNumbers([
       ...numbers,
@@ -28,11 +33,17 @@ export default function Cellphone () {
     setNumbers(lastItem)
   }
 
+  const InputFontSize = {
+    fontSize: numbers.length <= 10 ? '2rem' : '1.4rem'
+  }
+
   return (
     <div className="phone">
+      <div className="phone__dock"></div>
       <label className="phone__input__container">
-        <input type="number" value={numbers.join('')} onChange={handleChange} max="999999999999999" /* 15 dígitos máximo */ />
-        <button onClick={handleBackspace} value="<"> =</button>
+        <div style={{ width: '40px' }}></div>
+        <input type="number" value={numbers.join('')} onChange={handleChangeInput} max="999999999999999" style={InputFontSize} />
+        <button onClick={handleBackspace}><Backspace fill="#adacac" /></button>
       </label>
       <div className="phone__keys__container">
         {
@@ -42,7 +53,7 @@ export default function Cellphone () {
         }
       </div>
       <div className="phone__buttons">
-        <button>UwU</button>
+        <button>Verify number</button>
       </div>
     </div>
   )
