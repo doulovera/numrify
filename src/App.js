@@ -6,11 +6,10 @@ function App () {
     <div className="App">
       <section>
         <h2>Write the number</h2>
-        <div className="cellphone">
-          <Cellphone />
-        </div>
+        <Cellphone />
       </section>
-      <section></section>
+      <section>
+      </section>
     </div>
   )
 }

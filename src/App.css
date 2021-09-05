@@ -3,6 +3,7 @@
   --secondary: #fdc500;
   --white: #ffffff;
   --black: #000000;
+  --key-size: 85px;
 }
 
 .App {
@@ -14,11 +15,11 @@
   align-items: center;
   justify-content: center;
   background-color: #00296b;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--white);
 }
 
 section {
   height: 95vh;
   width: 50vw;
+  min-width: 320px;
 }
