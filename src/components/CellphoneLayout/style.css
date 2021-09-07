@@ -1,0 +1,24 @@
+.phone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 550px;
+  width: 300px;
+  padding: 25px 0;
+  margin: auto;
+  background-color: var(--white);
+  border: 12px solid #000;
+  box-shadow: 0 0 0 3px #686868;
+  border-radius: 40px;
+  user-select: none;
+}
+
+.phone__dock {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 80px);
+  height: 20px;
+  width: 160px;
+  background-color: #000;
+  border-radius: 0 0 14px 14px;
+}

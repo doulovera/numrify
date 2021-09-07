@@ -7,7 +7,7 @@ const KEYS = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 0
 ]
 
-export default function Cellphone () {
+export default function Cellphone ({ getVerifNumber }) {
   const [numbers, setNumbers] = useState([])
 
   const maxNumberLength = numbers.length >= 15
@@ -38,8 +38,7 @@ export default function Cellphone () {
   }
 
   return (
-    <div className="phone">
-      <div className="phone__dock"></div>
+    <>
       <label className="phone__input__container">
         <div style={{ width: '40px' }}></div>
         <input type="number" value={numbers.join('')} onChange={handleChangeInput} max="999999999999999" style={InputFontSize} />
@@ -53,8 +52,8 @@ export default function Cellphone () {
         }
       </div>
       <div className="phone__buttons">
-        <button className="phone__verify-number">Verify number</button>
+        <button className="phone__verify-number" onClick={() => getVerifNumber(numbers)}>Verify number</button>
       </div>
-    </div>
+    </>
   )
 }

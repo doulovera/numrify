@@ -1,6 +1,4 @@
 :root {
-  --primary: #;
-  --secondary: #fdc500;
   --white: #ffffff;
   --black: #000000;
   --key-size: 70px;
@@ -20,10 +18,12 @@
 
 section {
   height: auto;
-  width: 50vw;
+  width: 45vw;
   min-width: 320px;
 }
 
 button {
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
 }
