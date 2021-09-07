@@ -2,17 +2,13 @@ import React from 'react'
 import Notification from '../Icons/Notification'
 import './style.css'
 
-export default function NotificationComponent () {
-  const closePopup = () => {
-    console.log('xd')
-  }
-
+export default function NotificationComponent ({ handleClose }) {
   return (
     <div className="notif__card">
       <div className="notif__header">
         <Notification fill="#c13516" />
         <span className="notif__header__title">Información</span>
-        <button className="notif__header__close" onClick={closePopup}>&times;</button>
+        <button className="notif__header__close" onClick={handleClose}>&times;</button>
       </div>
       <div className="notif__content">
         <h4 className="notif__content__title">Para ingresar el número</h4>
