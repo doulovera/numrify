@@ -43,6 +43,8 @@
 }
 
 .phone__verify-number {
+  height: 50px;
+  width: 190px;
   padding: 10px 20px;
   background-color: #46b14f;
   color: var(--white);
@@ -51,4 +53,11 @@
   border-radius: 100px;
   border: 0;
   outline: 0;
+}
+
+.phone__verify-number:disabled {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #46b14fdd;
 }

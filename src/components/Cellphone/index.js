@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import PhoneKey from '../PhoneKey'
 import Backspace from '../Icons/Backspace'
+import Loading from '../Icons/Loading'
 import './style.css'
 
 const KEYS = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 0
 ]
 
-export default function Cellphone ({ getVerifNumber }) {
+export default function Cellphone ({ getVerifNumber, isLoading }) {
   const [numbers, setNumbers] = useState([])
 
   const maxNumberLength = numbers.length >= 15
@@ -52,7 +53,7 @@ export default function Cellphone ({ getVerifNumber }) {
         }
       </div>
       <div className="phone__buttons">
-        <button className="phone__verify-number" onClick={() => getVerifNumber(numbers)}>Verify number</button>
+        <button className="phone__verify-number" disabled={isLoading} onClick={() => getVerifNumber(numbers)}>{!isLoading ? 'Verify number' : <Loading color="#fff" /> }</button>
       </div>
     </>
   )

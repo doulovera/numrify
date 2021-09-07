@@ -6,6 +6,7 @@ import Output from './components/Output'
 
 function App () {
   const [data, setData] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
   const refScroll = useRef(null)
 
   useEffect(() => {
@@ -13,6 +14,7 @@ function App () {
   }, [data])
 
   const getVerifNumber = (phoneNumber) => {
+    setIsLoading(true)
     const stringPhone = phoneNumber.join('')
 
     try {
@@ -45,8 +47,11 @@ function App () {
               carrier
             }
           ])
+
+          setIsLoading(false)
         })
     } catch (err) {
+      setIsLoading(false)
       console.error(err)
     }
   }
@@ -55,7 +60,7 @@ function App () {
     <div className="App">
       <section style={{ marginTop: '10px' }}>
         <CellphoneLayout>
-          <Cellphone getVerifNumber={getVerifNumber} />
+          <Cellphone getVerifNumber={getVerifNumber} isLoading={isLoading} />
         </CellphoneLayout>
       </section>
       <section style={{ margin: '20px 0 15px' }}>
