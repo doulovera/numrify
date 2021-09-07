@@ -5,7 +5,7 @@ export default function Output ({ data, refScroll }) {
   return (
     <>
       <div className="output__profile">
-        <a className="output__go-back" href="https://doulovera.vercel.app/" target="_blank" rel="noreferrer">
+        <a className="output__go-back" href="#top">
           <GoBack fill="#278afc" />
         </a>
         <div className="output__contact">

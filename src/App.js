@@ -60,7 +60,7 @@ function App () {
 
   return (
     <div className="App">
-      <section style={{ marginTop: '10px' }}>
+      <section style={{ marginTop: '10px' }} id="top">
         <CellphoneLayout>
           <EnterPhone getVerifNumber={getVerifNumber} isLoading={isLoading} />
         </CellphoneLayout>

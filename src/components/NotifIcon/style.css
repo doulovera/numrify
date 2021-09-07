@@ -6,16 +6,16 @@
   border: 0;
   outline: 0;
   font-size: 1.4rem;
-  animation: rotate .2s infinite;
+  animation: rotate .1s infinite;
   animation-direction: alternate;
 }
 
 @keyframes rotate {
   0% {
-    transform: rotate(15deg);
+    transform: rotate(25deg);
   }
 
   100% {
-    transform: rotate(-15deg);
+    transform: rotate(-25deg);
   }
 }
