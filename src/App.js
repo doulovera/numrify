@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import CellphoneLayout from './components/CellphoneLayout'
-import Cellphone from './components/Cellphone'
+import EnterPhone from './components/EnterPhone'
 import Output from './components/Output'
 
 function App () {
@@ -16,6 +16,8 @@ function App () {
   const getVerifNumber = (phoneNumber) => {
     setIsLoading(true)
     const stringPhone = phoneNumber.join('')
+
+    if (!stringPhone) return setIsLoading(false)
 
     try {
       fetch(`https://api.veriphone.io/v2/verify?phone=%2B${stringPhone}&key=${process.env.REACT_APP_API_KEY}`)
@@ -60,7 +62,7 @@ function App () {
     <div className="App">
       <section style={{ marginTop: '10px' }}>
         <CellphoneLayout>
-          <Cellphone getVerifNumber={getVerifNumber} isLoading={isLoading} />
+          <EnterPhone getVerifNumber={getVerifNumber} isLoading={isLoading} />
         </CellphoneLayout>
       </section>
       <section style={{ margin: '20px 0 15px' }}>

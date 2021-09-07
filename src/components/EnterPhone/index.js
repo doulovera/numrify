@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PhoneKey from '../PhoneKey'
+import NotifIcon from '../NotifIcon'
 import Backspace from '../Icons/Backspace'
 import Loading from '../Icons/Loading'
 import './style.css'
@@ -8,7 +9,7 @@ const KEYS = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 0
 ]
 
-export default function Cellphone ({ getVerifNumber, isLoading }) {
+export default function EnterPhone ({ getVerifNumber, isLoading }) {
   const [numbers, setNumbers] = useState([])
 
   const maxNumberLength = numbers.length >= 15
@@ -40,6 +41,7 @@ export default function Cellphone ({ getVerifNumber, isLoading }) {
 
   return (
     <>
+      <NotifIcon />
       <label className="phone__input__container">
         <div style={{ width: '40px' }}></div>
         <input type="number" value={numbers.join('')} onChange={handleChangeInput} max="999999999999999" style={InputFontSize} />

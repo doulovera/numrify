@@ -1,25 +1,26 @@
 import './style.css'
 import GoBack from '../Icons/GoBack'
-import { Fragment } from 'react'
 
 export default function Output ({ data, refScroll }) {
   return (
     <>
       <div className="output__profile">
-        <span className="output__go-back">
+        <a className="output__go-back" href="https://doulovera.vercel.app/" target="_blank" rel="noreferrer">
           <GoBack fill="#278afc" />
-        </span>
+        </a>
         <div className="output__contact">
-          <img src="https://avatars.githubusercontent.com/u/42481580?v=4" alt="@doulovera on twitter and github!" width="35px" />
-          <a href="https://doulovera.vercel.app/" target="_blank" rel="noreferrer">Douglas Lovera {'>'}</a>
+          <a className="" href="https://doulovera.vercel.app/" target="_blank" rel="noreferrer">
+            <img src="https://avatars.githubusercontent.com/u/42481580?v=4" alt="@doulovera on twitter and github!" width="35px" />
+            <span>Douglas Lovera {'>'}</span>
+          </a>
         </div>
       </div>
       <div className="output__messages">
         {
-          data.map(({ status, phone, phone_valid, country, country_code, phone_type, international_number, local_number, carrier }, index) => {
+          data.map(({ status, phone_valid, country, country_code, phone_type, international_number, local_number, carrier }, index) => {
             if (status !== 'success') return <div key={index} className="phone__message">⚠️ An error has ocurred</div>
 
-            if (!phone_valid) return <div key={index} className="phone__message">🔴 Is not Valid</div>
+            if (!phone_valid) return <div key={index} className="phone__message">🔴 Not valid number</div>
 
             return <div key={index} className="phone__message">
                       <p>{ phone_valid && '🟢 Is Valid' }</p>
