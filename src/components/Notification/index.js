@@ -7,14 +7,14 @@ export default function NotificationComponent ({ handleClose }) {
     <div className="notif__card">
       <div className="notif__header">
         <Notification fill="#c13516" />
-        <span className="notif__header__title">Información</span>
+        <span className="notif__header__title">Information</span>
         <button className="notif__header__close" onClick={handleClose}>&times;</button>
       </div>
       <div className="notif__content">
-        <h4 className="notif__content__title">Para ingresar el número</h4>
+        <h4 className="notif__content__title">Entering a phone number</h4>
         <span className="notif__content__description">
-          Introduce el número con el código de área sin el <strong>+</strong><br />
-          Datos extraídos con <a href="https://veriphone.io/">Veriphone.io</a>
+          Put the phone number with the area code without the <strong>+</strong><br />
+          Data extracted from <a href="https://veriphone.io/">Veriphone.io</a>
         </span>
       </div>
     </div>
